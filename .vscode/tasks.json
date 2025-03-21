@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"type": "cppbuild",
+		"label": "C/C++: g++.exe build all files",  // More descriptive label
+		"command": "C:\\mingw64\\bin\\g++.exe",
+		"args": [
+		  "-g",  // Include debug information
+		  "${workspaceFolder}\\main.cpp",  // Compile main.cpp
+		  "${workspaceFolder}\\guessit.cpp", // Compile guessit.cpp
+		  "-o",
+		  "${workspaceFolder}\\guessit.exe"   // Output executable name
+		],
+		"options": {
+		  "cwd": "${workspaceFolder}"
+		},
+		"problemMatcher": [
+		  "$gcc"
+		],
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"detail": "Compiles main.cpp and guessit.cpp" // More descriptive detail
+	  }
+	]
+  }
