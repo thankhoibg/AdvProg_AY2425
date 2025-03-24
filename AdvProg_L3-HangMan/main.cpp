@@ -16,6 +16,8 @@ int main()
     //string vocabularyFile = "data/ErrorOpenFileTest.txt";
     //string vocabularyFile = "data/EmptyTest.txt";
     vector<string> wordList;
+//    wordList.push_back("helloworld");
+//    wordList.push_back("banana");
     try {
         wordList = readWordListFromFile(vocabularyFile);
     } catch (domain_error) {
@@ -37,16 +39,16 @@ int main()
     int incorrectGuess = 0;
     string correctChars = "";
     string incorrectChars = "";
-    
-    printScreen(word, secretWord, correctChars, incorrectGuess, incorrectChars); 
-    
+
+    printScreen(word, secretWord, correctChars, incorrectGuess, incorrectChars);
+
     do {
         char ch = getInputCharacter();
 
-        processData(ch, word, secretWord, 
+        processData(ch, word, secretWord,
                     correctChars, incorrectGuess, incorrectChars);
-        
-        printScreen(word, secretWord, correctChars, incorrectGuess, incorrectChars); 
+
+        printScreen(word, secretWord, correctChars, incorrectGuess, incorrectChars);
 
     } while (secretWord != word && incorrectGuess != MAX_MISTAKES-1);
 
